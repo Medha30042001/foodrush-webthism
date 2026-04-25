@@ -8,7 +8,7 @@ document.getElementById("orderForm").addEventListener("submit", async function(e
     address: document.getElementById("address").value
   };
 
-  const res = await fetch("http://localhost:5000/api/order", {
+  const res = await fetch("foodrush-webthism-production.up.railway.app", {
     method:"POST",
     headers:{
       "Content-Type":"application/json"
