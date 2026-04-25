@@ -7,11 +7,7 @@ const Order = require("./models/Order");
 
 const app = express();
 
-app.use(cors({
-  origin: "https://foodrush-webthism.netlify.app",
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type"]
-}));
+app.use(cors());
 
 app.use(express.json());
 
