@@ -7,7 +7,12 @@ const Order = require("./models/Order");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://foodrush-webthism.netlify.app",
+  methods: ["GET", "POST"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
